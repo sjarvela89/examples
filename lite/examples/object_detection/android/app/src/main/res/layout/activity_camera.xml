@@ -33,24 +33,55 @@
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context="org.tensorflow.demo.CameraActivity" />
+            tools:context="org.tensorflow.demo.CameraActivity">
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:srcCompat="@mipmap/appstacleimage" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextureView
+                    android:id="@+id/camera_preview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp" />
+
+                <ToggleButton
+                    android:id="@+id/record_button"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/record_btn_toggle"
+                    android:checked="false" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_alignParentTop="true"
-            android:background="@color/semi_transparent">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/tfl_logo" />
-        </android.support.v7.widget.Toolbar>
+            android:background="@color/semi_transparent"/>
 
     </RelativeLayout>
 
-    <include
+    <!--<include
         android:id="@+id/bottom_sheet_layout"
-        layout="@layout/layout_bottom_sheet" />
+        layout="@layout/layout_bottom_sheet" />-->
 </android.support.design.widget.CoordinatorLayout>
